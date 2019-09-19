@@ -46,11 +46,10 @@
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
 			<version>1.2.3</version>
 		</dependency>
-
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
-			<version>1.1.9</version>
+			<version>1.1.13</version>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
@@ -74,6 +73,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<!--druid去除底部广告-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>RELEASE</version>
 		</dependency>
 	</dependencies>
 
