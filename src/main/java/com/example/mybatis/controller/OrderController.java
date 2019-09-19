@@ -21,7 +21,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/orders")
 public class OrderController {
-    private  Logger logger = LoggerFactory.getLogger(getClass());
+    private  Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     private OrderService orderService;
