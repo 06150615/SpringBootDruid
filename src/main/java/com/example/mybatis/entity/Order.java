@@ -18,6 +18,11 @@ public class Order {
         this.id = id;
     }
 
+    @Override
+    public String toString() {
+        return "Order{" + "id=" + id + ", orderNo='" + orderNo + '\'' + ", createTime=" + createTime + '}';
+    }
+
     public String getOrderNo() {
         return orderNo;
     }
