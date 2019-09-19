@@ -2,9 +2,6 @@ package com.example.mybatis.entity;
 
 import javax.persistence.*;
 
-/**
- * Created by mengday.zhang on 2018/3/25.
- */
 @Table(name = "tbl_user")
 public class User {
 

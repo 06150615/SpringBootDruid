@@ -3,12 +3,34 @@
 <mapper namespace="com.example.mybatis.mapper.OrderMapper">
 
 
+	<sql id="Base_Column_List">
+		id, userName, passWord, user_sex, nick_name
+	</sql>
+
 	<select id="getOrders" resultType="Order">
 		SELECT * FROM tbl_order
 	</select>
 
 	<select id="getOrdersByPage" resultType="Order">
 		SELECT * FROM tbl_order
+	</select>
+
+	<insert id="insert" parameterType="com.example.mybatis.entity.Order" >
+		INSERT INTO
+		tbl_order
+		(id,orderNo,createTime)
+		VALUES
+		(#{id},#{orderNo},#{createTime})
+	</insert>
+
+
+	<select id="find" parameterType="java.lang.Long" resultType="com.example.mybatis.entity.Order" >
+		SELECT
+		*
+		FROM
+		tbl_order
+		WHERE
+		id = #{id};
 	</select>
 
 </mapper>

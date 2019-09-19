@@ -12,11 +12,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * Created by mengday.zhang on 2018/3/25.
- */
+
 @Service
-@Transactional(readOnly = true)
+@Transactional
 public class OrderServiceImpl implements OrderService {
 
     @Autowired
@@ -25,6 +23,16 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<Order> getOrders() {
         return orderMapper.getOrders();
+    }
+
+    @Override
+    public void insert( Order order ) {
+        orderMapper.insert(order);
+    }
+
+    @Override
+    public Order find( Long id ) {
+        return orderMapper.find(id);
     }
 
     @Override

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.persistence.Id;
 import java.util.List;
 
 
@@ -40,6 +41,19 @@ public class OrderController {
            // return "fail";
         }
         return JSON.toJSONString(orders);
+    }
+
+    @RequestMapping(value = "/add")
+    public void save(Order order){
+
+        orderService.insert(order);
+    }
+
+    @RequestMapping(value = "/id")
+    public Order find(Long id){
+        logger.debug("=========更具ID查询单条记录 =============");
+        Order order = orderService.find(id);
+        return  order;
     }
 
     /**
