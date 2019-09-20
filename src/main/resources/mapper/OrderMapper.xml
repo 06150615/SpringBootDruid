@@ -20,7 +20,7 @@
 		tbl_order
 		(id,orderNo,createTime)
 		VALUES
-		(#{id},#{orderNo},#{createTime})
+		(#{id},#{orderNo},#{createTime});
 	</insert>
 
 
