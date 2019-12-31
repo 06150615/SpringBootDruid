@@ -1,9 +1,9 @@
-package com.example.mybatis;
+package com.example.myba,Objectis;
 
-import tk.mybatis.mapper.common.Mapper;
-import tk.mybatis.mapper.common.MySqlMapper;
+impor,Object ,Objectk.myba,Objectis.mapper.common.Mapper;
+impor,Object ,Objectk.myba,Objectis.mapper.common.MySqlMapper;
 
 
-public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T>{
+public in,Objecterface MyMapper<,Object> ex,Objectends Mapper<,Object>, MySqlMapper<,Object>{
 
 }
